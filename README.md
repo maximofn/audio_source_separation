@@ -22,6 +22,6 @@ Install the requirements
 
 ```bash
 conda install -y pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
-conda install -y ipykernel
+conda install -y ipykernel ipywidgets
 pip install -r requirements.txt
 ```
