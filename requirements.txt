@@ -1,1 +1,5 @@
+# Separe audio
 speechbrain
+
+# SST
+git+https://github.com/openai/whisper.git
