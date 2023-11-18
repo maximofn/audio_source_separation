@@ -4,6 +4,16 @@ from separe_audio import separate_audio
 from speech_to_text import SST
 
 def main(video_file, transcript_file):
+    """
+    Main function
+
+    Args:
+        video_file (str): input video file
+        transcript_file (str): output transcript file
+
+    Returns:
+        None
+    """
     audio_file = f"{video_file.split('.')[0]}.wav"
     print(f"Converting {video_file} to {audio_file}")
     video_to_audio(video_file, audio_file)

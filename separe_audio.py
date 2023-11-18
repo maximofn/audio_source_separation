@@ -21,8 +21,20 @@ pretrained_models = {
 }
 
 def separate_audio(audio_file, pretrained_model_name="sepformer-libri2mix", device="cuda"):
+    """
+    Separate audio to 2 audios
+
+    Args:
+        audio_file (str): input audio file
+        pretrained_model_name (str): pretrained model name
+        device (str): device to use
+
+    Returns:
+        list: list of separed audios
+    """
     audio, extension = audio_file.split(".")
     audio_name = audio.split("/")[-1]
+
     pretrained_model = pretrained_models[pretrained_model_name]
     model = separator.from_hparams(source=pretrained_model["source"], savedir=pretrained_model["savedir"], run_opts={"device":device})
     estimated_sources = model.separate_file(path=audio_file)
